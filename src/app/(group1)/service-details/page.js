@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ServiceArtical from '@/components/sections/services/serviceArtical'
 
 export const metadata = {
@@ -9,7 +9,9 @@ export const metadata = {
 const ServiceDetails = () => {
     return (
         <main>
-            <ServiceArtical />
+            <Suspense fallback={<div />}> 
+                <ServiceArtical />
+            </Suspense>
         </main>
     )
 }
