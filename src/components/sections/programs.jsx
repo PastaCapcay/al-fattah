@@ -17,7 +17,15 @@ const Programs = () => {
         <div className="lg:pl-11">
             <div className="grid md:grid-cols-2 grid-cols-1 gap-y-7.5 lg:gap-x-[74px] gap-x-5 lg:pt-15 pt-10">
                 {
-                    servicesDataTwo.slice(0, 4).map(({icon, id, service_details, service_name}) => <ServiceCardTwo key={id} icon={icon} service_name={service_name} service_details={service_details} />)
+                    servicesDataTwo.slice(0, 4).map(({icon, id, service_details, service_name, slug}) => (
+                        <ServiceCardTwo
+                            key={id}
+                            icon={icon}
+                            service_name={service_name}
+                            service_details={service_details}
+                            slug={slug}
+                        />
+                    ))
                 }
             </div>
         </div>
