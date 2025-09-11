@@ -57,7 +57,7 @@ const ContactForm = () => {
                                     </div>
                                     <div>
                                         <h4 className="text-[28px] font-bold text-cream-foreground leading-[148%] font-nunito">2k+</h4>
-                                        <h6 className="text-xl font-bold text-cream-foreground mt-[5px] leading-[130%]">Project Completed</h6>
+                                        <h6 className="text-xl font-bold text-cream-foreground mt-[5px] leading-[130%]">Proyek Selesai</h6>
                                     </div>
                                 </div>
                             </div>

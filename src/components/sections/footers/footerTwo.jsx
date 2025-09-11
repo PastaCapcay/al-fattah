@@ -46,7 +46,7 @@ const FooterTwo = () => {
 
                         <ul className="flex flex-col lg:gap-[15px] gap-2.5 lg:pt-7.5 pt-5">
                             <li className="text-cream-foreground flex gap-4">
-                                <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Perum Grand Cikarang City, Sakura F.7 No.36, Karangraharja, Kec. Cikarang Utara, Kab. Bekasi, Jawa Barat 17550</span>
+                                <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Perum Grand Cikarang City (GCC) – Sakura Cinity, Blok F7 No.36 & Blok F19 No.36, Desa Karang Raharja, Kec. Cikarang Utara, Kab. Bekasi, Jawa Barat 17550 (dekat Kawasan Industri MM2100)</span>
                             </li>
                             <li className="text-cream-foreground flex gap-4">
                                 <FaEnvelope className='mt-1.5' /> <Link href="#">info@alfattah.sch.id</Link>

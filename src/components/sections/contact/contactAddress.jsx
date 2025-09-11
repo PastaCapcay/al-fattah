@@ -6,19 +6,24 @@ const ContactAddress = () => {
     return (
         <div className="lg:pb-15 lg:pt-15 pb-10 pt-10">
             <div className="container">
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7.5">
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-7.5 items-stretch">
                     <SlideUp delay={2}>
-                        <div className="bg-background rounded-md shadow-3xl pt-5 pb-7.5 px-7.5 text-center flex flex-col items-center">
+                        <div className="bg-background rounded-md shadow-3xl pt-5 pb-7.5 px-7.5 text-center flex flex-col items-center h-full min-h-[240px]">
                             <div className="w-16 h-16 rounded-full flex justify-center items-center bg-green">
                                 <span className="text-cream-foreground text-[28px]"><FaLocationDot /> </span>
                             </div>
                             <h5 className="font-bold text-xl mt-5 pb-2.5">Lokasi</h5>
-                            <p>Perum Grand Cikarang City, Sakura F.7 No.36, Karangraharja, Kec. Cikarang Utara, Kab. Bekasi, Jawa Barat 17550</p>
+                            <p
+                                title="Perum Grand Cikarang City (GCC) – Sakura Cinity, Blok F7 No.36 & Blok F19 No.36, Desa Karang Raharja, Kec. Cikarang Utara, Kab. Bekasi, Jawa Barat 17550 (dekat Kawasan Industri MM2100)"
+                                className="max-w-[280px] mx-auto text-[14px] leading-relaxed"
+                            >
+                                Perum Grand Cikarang City (GCC), Sakura Cinity, Blok F7 & F19 No.36, Desa Karang Raharja, Cikarang Utara, Bekasi 17550
+                            </p>
                         </div>
                     </SlideUp>
 
                     <SlideUp delay={3}>
-                        <div className="bg-background rounded-md shadow-3xl pt-5 pb-7.5 px-7.5 text-center flex flex-col items-center ">
+                        <div className="bg-background rounded-md shadow-3xl pt-5 pb-7.5 px-7.5 text-center flex flex-col items-center h-full min-h-[240px] ">
                             <div className="w-16 h-16 rounded-full flex justify-center items-center bg-green">
                                 <span className="text-cream-foreground text-[28px]"><FaEnvelope /> </span>
                             </div>
@@ -28,7 +33,7 @@ const ContactAddress = () => {
                     </SlideUp>
 
                     <SlideUp delay={4}>
-                        <div className="bg-background rounded-md shadow-3xl pt-5 pb-7.5 px-7.5 text-center flex flex-col items-center">
+                        <div className="bg-background rounded-md shadow-3xl pt-5 pb-7.5 px-7.5 text-center flex flex-col items-center h-full min-h-[240px]">
                             <div className="w-16 h-16 rounded-full flex justify-center items-center bg-green">
                                 <span className="text-cream-foreground text-[28px]"><FaPhone /> </span>
                             </div>
@@ -38,7 +43,7 @@ const ContactAddress = () => {
                     </SlideUp>
 
                     <SlideUp delay={5}>
-                        <div className="bg-background rounded-md shadow-3xl pt-5 pb-7.5 px-7.5 text-center flex flex-col items-center">
+                        <div className="bg-background rounded-md shadow-3xl pt-5 pb-7.5 px-7.5 text-center flex flex-col items-center h-full min-h-[240px]">
                             <div className="w-16 h-16 rounded-full flex justify-center items-center bg-green">
                                 <span className="text-cream-foreground text-[28px]"><FaClock /> </span>
                             </div>

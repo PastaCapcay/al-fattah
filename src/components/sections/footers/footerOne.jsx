@@ -33,7 +33,7 @@ const FooterOne = () => {
                         <ul className="flex flex-col gap-[15px] pt-5">
                             <li>
                                 <p className="text-[#686868] flex items-center gap-4">
-                                    <span className="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><FaLocationDot /></span> <span className="max-w-[168px]">Perum Grand Cikarang City, Sakura F.7 No.36, Karangraharja, Kec. Cikarang Utara, Kab. Bekasi, Jawa Barat 17550</span>
+                                    <span className="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><FaLocationDot /></span> <span className="max-w-[168px]">Perum Grand Cikarang City (GCC) – Sakura Cinity, Blok F7 No.36 & Blok F19 No.36, Desa Karang Raharja, Kec. Cikarang Utara, Kab. Bekasi, Jawa Barat 17550 (dekat Kawasan Industri MM2100)</span>
                                 </p>
                             </li>
                             <li>

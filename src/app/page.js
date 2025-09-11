@@ -4,7 +4,6 @@ import HeaderOne from '@/components/sections/headers/headerOne'
 import HeroOne from '@/components/sections/heros/heroOne'
 import SuccessProjectOne from '@/components/sections/successProjects/successProjectOne'
 import Gallery from '@/components/sections/gallery/gallery'
-import Teams from '@/components/sections/teams/teams'
 import Programs from '@/components/sections/programs'
 import FaqComp from '@/components/sections/faqComp'
 import NewsletterOne from '@/components/sections/newsletters/newsletterOne'
@@ -26,7 +25,6 @@ const Home = () => {
         <Programs/>
         <Gallery/>
         <FaqComp/>
-        <Teams/>
         <NewsletterOne/>
       </main>
       <FooterTwo/>

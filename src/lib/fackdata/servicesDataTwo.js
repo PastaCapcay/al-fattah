@@ -7,9 +7,11 @@ export const servicesDataTwo = [
         service_details:"Belajar melalui permainan terarah untuk stimulasi awal yang menyenangkan.",
         slug:"kb",
         long_description: "Program Kelompok Bermain (KB) dirancang untuk mengenalkan konsep dasar melalui bermain yang terstruktur. Anak dilatih kemandirian, regulasi emosi, dan keterampilan sosial dalam lingkungan yang aman dan hangat.",
-        age_range: "2–4 tahun",
-        schedule: "Senin–Jumat, 07.00–11.00 (opsi daycare hingga 17.00)",
+        age_range: "2–4 thn",
+        schedule: "Senin–Jumat, 07.00–10.30",
         curriculum: [
+            "Kurikulum Merdeka",
+            "Muatan lokal: sempoa, bahasa Inggris, angklung",
             "Pembiasaan (doa, salam, kerapian)",
             "Motorik halus & kasar (sensori-motor)",
             "Bahasa & komunikasi awal",

@@ -14,6 +14,18 @@ const ServiceArtical = () => {
     const searchParams = useSearchParams()
     const key = searchParams.get('s')
     const current = servicesDataTwo.find(s => s.slug === key)
+    const getServiceImage = (type) => {
+        switch (key) {
+            case 'kb':
+                return type === 'hero' ? '/images/services/service-details-1.png' : '/images/services/service-details-2.png'
+            case 'tk':
+                return type === 'hero' ? '/images/services/service-details-3.png' : '/images/services/service-details-4.png'
+            case 'daycare':
+                return type === 'hero' ? '/images/services/service-details-5.png' : '/images/services/service-details-6.png'
+            default:
+                return type === 'hero' ? '/images/services/service-details-1.png' : '/images/services/service-details-5.png'
+        }
+    }
     const renderIcon = (icon) => {
         switch (icon) {
             case 'car':
@@ -28,11 +40,13 @@ const ServiceArtical = () => {
         }
     }
     return (
-        <section className="lg:pt-15 pt-10">
+        <section className="lg:pt-15 pt-10 lg:pb-15 pb-10">
             <div className="container">
                 <SlideUp>
                     <div className="relative">
-                        <Image src={'/images/services/service-details-1.png'} width={1280} height={562} sizes='100vw' priority={true} alt="details" />
+                        <div className="relative w-full" style={{ aspectRatio: '410 / 242' }}>
+                            <Image src={getServiceImage('hero')} fill sizes='100vw' priority={true} alt="details" className="object-cover" />
+                        </div>
                         <div className="absolute left-5 top-5 flex items-center gap-3 bg-white/90 backdrop-blur px-3 py-2 rounded">
                             <Image src={key === 'kb' ? '/images/logos/KB.png' : key === 'tk' ? '/images/logos/TK.png' : key === 'daycare' ? '/images/logos/DAYCARE.png' : '/images/logos/YAYASAN.png'} width={28} height={28} alt="Logo Program" className="object-contain h-6 w-auto" />
                             <span className="text-sm font-medium">{current?.service_name || 'Layanan'}</span>
@@ -64,7 +78,9 @@ const ServiceArtical = () => {
                                 <li className="flex items-center gap-[15px] text-[#686868]"><i className="text-secondary-foreground"> <FaAnglesRight /> </i> <span>Kegiatan: {(current?.activities || []).join(', ')}</span> </li>
                             </ul>
                             <div>
-                                <Image src={'/images/services/service-details-5.png'} width={625} height={288} alt="service-details-5" />
+                                <div className="relative w-full" style={{ aspectRatio: '410 / 242' }}>
+                                    <Image src={getServiceImage('side')} fill alt="service-details" className="object-cover" />
+                                </div>
                             </div>
                         </div>
                     </SlideUp>
