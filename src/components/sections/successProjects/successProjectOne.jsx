@@ -27,10 +27,10 @@ const SuccessProjectOne = () => {
                     </div>
 
                     <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
-                        <CardOne icon={<Kindergarden />} color={"bg-primary"} number={"20k"} title={"Siswa Aktif"} />
-                        <CardOne icon={<Book />} color={"bg-destructive"} number={"12K"} title={"Kegiatan"} />
-                        <CardOne icon={<Blocks />} color={"bg-green"} number={"3K"} title={"Penghargaan"} />
-                        <CardOne icon={<Chalkboard />} color={"bg-secondary"} number={"23K"} title={"Kepuasan Wali"} />
+                        <CardOne icon={<Kindergarden />} color={"bg-primary"} number={"280"} title={"Siswa Aktif"} />
+                        <CardOne icon={<Book />} color={"bg-destructive"} number={"85"} title={"Aktivitas Edukatif"} />
+                        <CardOne icon={<Blocks />} color={"bg-green"} number={"18"} title={"Penghargaan"} />
+                        <CardOne icon={<Chalkboard />} color={"bg-secondary"} number={"220"} title={"Testimoni Orang Tua"} />
 
                     </div>
 

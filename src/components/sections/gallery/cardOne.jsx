@@ -33,7 +33,28 @@ const CardOne = ({ data_target }) => {
 
             <div className="md:col-start-9 sm:col-span-6 sm:col-end-13 col-span-full relative">
                 <Image src={'/images/portfolio/portfolio-6.png'} width={410} height={295} alt="img" className="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]" />
-                
+
+            </div>
+
+            {/* Additional portfolio images */}
+            <div className="md:col-start-1 sm:col-start-1 sm:col-end-4 col-span-full relative">
+                <Image src={'/images/portfolio/portfolio-7.png'} width={300} height={277} alt="img" className="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]" />
+
+            </div>
+
+            <div className="md:col-start-4 md:col-end-7 sm:col-start-4 sm:col-end-7 col-span-full relative">
+                <Image src={'/images/portfolio/portfolio-8.png'} width={300} height={277} alt="img" className="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]" />
+
+            </div>
+
+            <div className="md:col-start-7 md:col-end-10 sm:col-start-7 sm:col-end-10 col-span-full relative">
+                <Image src={'/images/portfolio/portfolio-9.png'} width={300} height={277} alt="img" className="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]" />
+
+            </div>
+
+            <div className="md:col-start-10 sm:col-start-10 sm:col-end-13 col-span-full relative">
+                <Image src={'/images/portfolio/portfolio-10.png'} width={300} height={277} alt="img" className="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]" />
+
             </div>
 
         </div>

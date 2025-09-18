@@ -6,6 +6,7 @@ import CardOne from './cardOne'
 import CardTwo from './cardTwo'
 import CardThree from './cardThree'
 import CardFour from './cardFour'
+import VideoCard from './videoCard'
 import SlideUp from '@/lib/animations/slideUp'
 
 const categoryList = [
@@ -34,10 +35,16 @@ const categoryList = [
         label: "Pembinaan",
         data_target: "coaching"
     },
+    {
+        id: 6,
+        label: "Video",
+        data_target: "video"
+    },
 
 ]
 const Gallery = () => {
     const [activeTab, setActiveTab] = useState("education")
+    const [selectedVideo, setSelectedVideo] = useState(null)
 
     return (
         <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 portfolio">
@@ -60,14 +67,42 @@ const Gallery = () => {
                     </ul>
                     <SlideUp>
                         <div className="mt-[64px] overflow-hidden relative ">
-                            <CardOne data_target={activeTab} />
-                            <CardTwo data_target={activeTab} />
-                            <CardThree data_target={activeTab} />
-                            <CardFour data_target={activeTab} />
+                            {activeTab === "video" ? (
+                                <VideoCard onVideoSelect={setSelectedVideo} />
+                            ) : (
+                                <>
+                                    <CardOne data_target={activeTab} />
+                                    <CardTwo data_target={activeTab} />
+                                    <CardThree data_target={activeTab} />
+                                    <CardFour data_target={activeTab} />
+                                </>
+                            )}
                         </div>
                     </SlideUp>
                 </div>
             </div>
+
+            {/* Video Modal */}
+            {selectedVideo && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75" onClick={() => setSelectedVideo(null)}>
+                    <div className="relative w-full max-w-4xl mx-4" onClick={(e) => e.stopPropagation()}>
+                        <button
+                            className="absolute top-4 right-4 z-10 text-white text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75"
+                            onClick={() => setSelectedVideo(null)}
+                        >
+                            ×
+                        </button>
+                        <video
+                            src={selectedVideo}
+                            controls
+                            autoPlay
+                            className="w-full h-auto max-h-[80vh] rounded-lg"
+                        >
+                            Browser Anda tidak mendukung pemutaran video.
+                        </video>
+                    </div>
+                </div>
+            )}
         </section>
     )
 }
