@@ -21,7 +21,7 @@ const ContactForm = () => {
         // kirim tanpa alert; asumsikan field diisi oleh pengguna
         // normalisasi nomor WA
         const onlyDigits = wa.replace(/\D/g, '')
-        const tujuan = '6289625003857'
+        const tujuan = '6281298465771'
         const phone = onlyDigits.startsWith('62') ? onlyDigits : (onlyDigits.startsWith('0') ? '62' + onlyDigits.slice(1) : '62' + onlyDigits)
         const lines = [
             'Pendaftaran Program Al-Fattah',

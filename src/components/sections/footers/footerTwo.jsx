@@ -49,10 +49,10 @@ const FooterTwo = () => {
                                 <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Perum Grand Cikarang City (GCC) – Sakura Cinity, Blok F7 No.36 & Blok F19 No.36, Desa Karang Raharja, Kec. Cikarang Utara, Kab. Bekasi, Jawa Barat 17550 (dekat Kawasan Industri MM2100)</span>
                             </li>
                             <li className="text-cream-foreground flex gap-4">
-                                <FaEnvelope className='mt-1.5' /> <Link href="#">info@alfattah.sch.id</Link>
+                                <FaEnvelope className='mt-1.5' /> <Link href="mailto:info@tkalfattah.sch.id">info@tkalfattah.sch.id</Link>
                             </li>
                             <li className="text-cream-foreground flex gap-4">
-                                <FaPhone className='mt-1.5' /> <Link href="#">0812-9846-5771</Link>
+                                <FaPhone className='mt-1.5' /> <Link href="/contact-us#pendaftaran">0812-9846-5771</Link>
                             </li>
                         </ul>
                     </SlideUp>

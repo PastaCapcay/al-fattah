@@ -10,10 +10,10 @@ const TopHeader = () => {
                     <div>
                         <ul className="flex gap-5 flex-wrap justify-center text-[13px] lg:text-[14px]">
                             <li className='text-cream-foreground flex items-center gap-2'>
-                                <FaPhone /> <Link href={"#"}>0812-9846-5771</Link>
+                                <FaPhone /> <Link href={"/contact-us#pendaftaran"}>0812-9846-5771</Link>
                             </li>
                             <li className='text-cream-foreground flex items-center gap-2'>
-                                <FaEnvelope /> <Link href={"#"}>info@alfattah.sch.id</Link>
+                                <FaEnvelope /> <Link href={"mailto:info@tkalfattah.sch.id"}>info@tkalfattah.sch.id</Link>
                             </li>
                             <li className='text-cream-foreground flex items-center gap-2'>
                                 <FaLocationDot /> <span title="Perum Grand Cikarang City (GCC) – Sakura Cinity, Blok F7 No.36 & Blok F19 No.36, Desa Karang Raharja, Kec. Cikarang Utara, Kab. Bekasi, Jawa Barat 17550 (dekat Kawasan Industri MM2100)" className="truncate max-w-[520px] md:max-w-[680px]">GCC – Sakura Cinity, Blok F7 & F19 No.36, Karang Raharja, Cikarang Utara, Bekasi</span>

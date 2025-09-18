@@ -38,12 +38,12 @@ const FooterOne = () => {
                             </li>
                             <li>
                                 <p className="text-[#686868] flex items-center gap-4">
-                                    <span className="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><FaEnvelope /></span> <Link href="">info@alfattah.sch.id</Link>
+                                    <span className="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><FaEnvelope /></span> <Link href="mailto:info@tkalfattah.sch.id">info@tkalfattah.sch.id</Link>
                                 </p>
                             </li>
                             <li>
                                 <p className="text-[#686868] flex items-center gap-4">
-                                    <span className="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><FaPhone /></span> <Link href="">0812-9846-5771</Link>
+                                    <span className="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><FaPhone /></span> <Link href="/contact-us#pendaftaran">0812-9846-5771</Link>
                                 </p>
                             </li>
                         </ul>

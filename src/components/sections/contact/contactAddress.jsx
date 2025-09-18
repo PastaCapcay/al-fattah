@@ -28,7 +28,7 @@ const ContactAddress = () => {
                                 <span className="text-cream-foreground text-[28px]"><FaEnvelope /> </span>
                             </div>
                             <h5 className="font-bold text-xl mt-5 pb-2.5">Email</h5>
-                            <p><a href="">info@alfattah.sch.id</a></p>
+                            <p><a href="mailto:info@tkalfattah.sch.id">info@tkalfattah.sch.id</a></p>
                         </div>
                     </SlideUp>
 
@@ -38,7 +38,7 @@ const ContactAddress = () => {
                                 <span className="text-cream-foreground text-[28px]"><FaPhone /> </span>
                             </div>
                             <h5 className="font-bold text-xl mt-5 pb-2.5">Kontak</h5>
-                            <p><a href="">0812-9846-5771</a></p>
+                            <p><a href="/contact-us#pendaftaran">0812-9846-5771</a></p>
                         </div>
                     </SlideUp>
 
