@@ -1,17 +1,15 @@
 "use client"
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { FaMagnifyingGlass, FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 import DesktopMenu from './desktopMenu'
 import MobileMenu from './mobileMenu'
 import { Button } from '@/components/ui/button'
 import TopHeader from './topHeader'
-import SearchForm from './searchForm'
 import Logo from '@/components/ui/logo'
 import StickyHeader from '@/components/ui/stickyHeader'
 
 const HeaderOne = () => {
-    const [isSerchActive, setIsSerchActive] = useState(false)
     const [isMobleMenuActive, setIsMobleMenuActive] = useState(false)
 
     return (
@@ -28,9 +26,6 @@ const HeaderOne = () => {
                                     <MobileMenu isMobleMenuActive={isMobleMenuActive} setIsMobleMenuActive={setIsMobleMenuActive} />
 
                                     <div className="flex items-center gap-6 ">
-                                        <div className="ml-16 cursor-pointer" onClick={() => setIsSerchActive(true)}>
-                                            <FaMagnifyingGlass className='text-xl' />
-                                        </div>
                                         <Button asChild variant="ghost" className="sm:flex hidden">
                                             <Link href={"/contact-us#pendaftaran"}> Daftar Sekarang <FaArrowRight /></Link>
                                         </Button>
@@ -41,8 +36,7 @@ const HeaderOne = () => {
                                             <span className="block h-[3px] w-5 bg-muted mt-2"></span>
                                         </div>
                                     </div>
-
-                                    <SearchForm isSerchActive={isSerchActive} setIsSerchActive={setIsSerchActive} />
+                                    
                                 </div>
                             </div>
                         </div>

@@ -5,11 +5,25 @@ import Image from 'next/image'
 export const metadata = {
     title: "Tentang Kami | TK, KB, dan Daycare Al-Fattah",
     description: "Profil lembaga dan Yayasan Wira Mahardhika Wicaksana, visi, misi, dan layanan Al-Fattah.",
+    alternates: {
+        canonical: "/about-us",
+    },
 };
 
+const siteUrl = process.env.SITE_URL || "https://tkalfattah.sch.id";
+
 const AboutUs = () => {
+    const breadcrumbLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Beranda", item: siteUrl },
+            { "@type": "ListItem", position: 2, name: "Tentang Kami", item: `${siteUrl}/about-us` },
+        ],
+    };
     return (
         <main>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
             <AboutOne gridClass={"lg:grid-cols-2"} isAboutpage={true} />
             <section className="lg:pt-15 pt-10 lg:pb-15 pb-10">
                 <div className="container">
