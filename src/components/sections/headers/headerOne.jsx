@@ -25,7 +25,7 @@ const HeaderOne = () => {
                                     <DesktopMenu />
                                     <MobileMenu isMobleMenuActive={isMobleMenuActive} setIsMobleMenuActive={setIsMobleMenuActive} />
 
-                                    <div className="flex items-center gap-6 ">
+                                    <div className="flex items-center gap-8 ml-8">
                                         <Button asChild variant="ghost" className="sm:flex hidden">
                                             <Link href={"/contact-us#pendaftaran"}> Daftar Sekarang <FaArrowRight /></Link>
                                         </Button>
