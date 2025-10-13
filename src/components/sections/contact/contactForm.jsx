@@ -79,34 +79,24 @@ const ContactForm = () => {
         const tujuan = '+6281298465771'
         const phone = onlyDigits.startsWith('62') ? onlyDigits : (onlyDigits.startsWith('0') ? '62' + onlyDigits.slice(1) : '62' + onlyDigits)
         
-        // Format pesan untuk preview
+        // Format pesan untuk preview - pesan singkat yang akan dikirim ke WhatsApp
         const lines = [
-            '🧒 PENDAFTARAN PROGRAM AL-FATTAH 🧒',
+            'PENDAFTARAN PROGRAM AL-FATTAH',
             '',
-            '📋 DATA ANAK:',
-            `Nama Lengkap: ${namaLengkapAnak}`,
-            namaPanggilan ? `Nama Panggilan: ${namaPanggilan}` : null,
-            jenisKelamin ? `Jenis Kelamin: ${jenisKelamin}` : null,
-            tempatLahir && tanggalLahir ? `Tempat, Tgl Lahir: ${tempatLahir}, ${new Date(tanggalLahir).toLocaleDateString('id-ID')}` : null,
-            usia ? `Usia saat ini: ${usia}` : null,
-            alamatAnak ? `Alamat: ${alamatAnak}` : null,
-            agama ? `Agama: ${agama}` : null,
-            anakKe && totalSaudara ? `Anak ke-${anakKe} dari ${totalSaudara} bersaudara` : null,
-            golonganDarah ? `Golongan Darah: ${golonganDarah}` : null,
-            riwayatKesehatan ? `Riwayat Kesehatan: ${riwayatKesehatan}` : null,
+            'Halo, saya ingin mendaftarkan anak saya:',
             '',
-            '👨‍👩‍👧 DATA ORANG TUA/WALI:',
-            `Nama Ayah: ${namaAyah}`,
-            pekerjaanAyah ? `Pekerjaan Ayah: ${pekerjaanAyah}` : null,
-            `Nama Ibu: ${namaIbu}`,
-            pekerjaanIbu ? `Pekerjaan Ibu: ${pekerjaanIbu}` : null,
-            `No. HP (WA): ${phone}`,
-            email ? `Email: ${email}` : null,
-            alamatOrangTua ? `Alamat: ${alamatOrangTua}` : null,
-            waliAnak ? `Wali Anak: ${waliAnak}` : null,
-            '',
-            '🎓 PROGRAM:',
+            `Nama: ${namaLengkapAnak}`,
+            `Orang Tua: ${namaAyah} & ${namaIbu}`,
+            `Kontak: ${phone}`,
             `Program: ${program}`,
+            '',
+            'Mohon bantuannya untuk proses pendaftaran. Terima kasih.',
+            '',
+            'INSTRUKSI PENTING:',
+            '• Setelah mengirim pesan ini, silakan kirim juga file PDF',
+            '• Klik tombol "Unduh Form" untuk mendapatkan PDF lengkap',
+            '• PDF berisi data lengkap dan instruksi dokumen yang harus dibawa',
+            '• Kirim PDF tersebut ke admin untuk melengkapi proses pendaftaran'
         ].filter(Boolean)
         
         // Tampilkan modal konfirmasi
@@ -120,42 +110,24 @@ const ContactForm = () => {
         const tujuan = '+6281298465771'
         const phone = onlyDigits.startsWith('62') ? onlyDigits : (onlyDigits.startsWith('0') ? '62' + onlyDigits.slice(1) : '62' + onlyDigits)
         
-        // Format pesan untuk WhatsApp
-        const lines = [
-            '🧒 PENDAFTARAN PROGRAM AL-FATTAH 🧒',
-            '',
-            '📋 DATA ANAK:',
-            `Nama Lengkap: ${namaLengkapAnak}`,
-            namaPanggilan ? `Nama Panggilan: ${namaPanggilan}` : null,
-            jenisKelamin ? `Jenis Kelamin: ${jenisKelamin}` : null,
-            tempatLahir && tanggalLahir ? `Tempat, Tgl Lahir: ${tempatLahir}, ${new Date(tanggalLahir).toLocaleDateString('id-ID')}` : null,
-            usia ? `Usia saat ini: ${usia}` : null,
-            alamatAnak ? `Alamat: ${alamatAnak}` : null,
-            agama ? `Agama: ${agama}` : null,
-            anakKe && totalSaudara ? `Anak ke-${anakKe} dari ${totalSaudara} bersaudara` : null,
-            golonganDarah ? `Golongan Darah: ${golonganDarah}` : null,
-            riwayatKesehatan ? `Riwayat Kesehatan: ${riwayatKesehatan}` : null,
-            '',
-            '👨‍👩‍👧 DATA ORANG TUA/WALI:',
-            `Nama Ayah: ${namaAyah}`,
-            pekerjaanAyah ? `Pekerjaan Ayah: ${pekerjaanAyah}` : null,
-            `Nama Ibu: ${namaIbu}`,
-            pekerjaanIbu ? `Pekerjaan Ibu: ${pekerjaanIbu}` : null,
-            `No. HP (WA): ${phone}`,
-            email ? `Email: ${email}` : null,
-            alamatOrangTua ? `Alamat: ${alamatOrangTua}` : null,
-            waliAnak ? `Wali Anak: ${waliAnak}` : null,
-            '',
-            '🎓 PROGRAM:',
-            `Program: ${program}`,
-        ].filter(Boolean)
+        // Pesan singkat untuk admin
+        const message = `PENDAFTARAN PROGRAM AL-FATTAH
+
+Halo, saya ingin mendaftarkan anak saya:
+
+Nama: ${namaLengkapAnak}
+Orang Tua: ${namaAyah} & ${namaIbu}
+Kontak: ${phone}
+Program: ${program}
+
+Mohon bantuannya untuk proses pendaftaran. Terima kasih.`
         
-        const text = encodeURIComponent(lines.join('\n'))
+        const text = encodeURIComponent(message)
         const url = `https://api.whatsapp.com/send?phone=${tujuan}&text=${text}`
         window.location.assign(url)
     }
 
-    const handleDownloadPDF = async () => {
+    const generatePDFBlob = async () => {
         // Normalisasi nomor WA
         const onlyDigits = wa.replace(/\D/g, '')
         const phone = onlyDigits.startsWith('62') ? onlyDigits : (onlyDigits.startsWith('0') ? '62' + onlyDigits.slice(1) : '62' + onlyDigits)
@@ -414,9 +386,23 @@ const ContactForm = () => {
         doc.text(`${new Date().toLocaleDateString('id-ID')}`, 25, yPosition + 11)
         doc.text(`${new Date().toLocaleTimeString('id-ID')}`, 115, yPosition + 11)
         
-        // Download PDF
+        // Return PDF as blob
+        return doc.output('blob')
+    }
+
+    const handleDownloadPDF = async () => {
+        const pdfBlob = await generatePDFBlob()
         const fileName = `Form_Pendaftaran_${namaLengkapAnak.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}.pdf`
-        doc.save(fileName)
+        
+        // Download PDF
+        const url = URL.createObjectURL(pdfBlob)
+        const link = document.createElement('a')
+        link.href = url
+        link.download = fileName
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+        URL.revokeObjectURL(url)
     }
 
     return (
@@ -609,44 +595,44 @@ const ContactForm = () => {
                 </div>
             </div>
             
-            {/* Modal Konfirmasi */}
-            {showModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-                    <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-hidden">
-                        <div className="p-6 border-b border-gray-200">
-                            <h3 className="text-xl font-bold text-gray-900">Konfirmasi Data Pendaftaran</h3>
-                            <p className="text-gray-600 mt-1">Periksa kembali data yang akan dikirim ke WhatsApp</p>
-                        </div>
-                        <div className="p-6 overflow-y-auto max-h-[60vh]">
-                            <pre className="whitespace-pre-wrap text-sm text-gray-700 font-mono bg-gray-50 p-4 rounded-lg">
-                                {modalData}
-                            </pre>
-                        </div>
-                        <div className="p-6 border-t border-gray-200 flex flex-col sm:flex-row gap-3 justify-end">
-                            <Button 
-                                onClick={() => setShowModal(false)}
-                                variant="outline"
-                                className="px-6"
-                            >
-                                Batal
-                            </Button>
-                            <Button 
-                                onClick={handleDownloadPDF}
-                                variant="outline"
-                                className="px-6 border-blue-500 text-blue-600 hover:bg-blue-50"
-                            >
-                                📄 Unduh Form
-                            </Button>
-                            <Button 
-                                onClick={handleConfirmSubmit}
-                                className="px-6 bg-green-600 hover:bg-green-700"
-                            >
-                                📱 Kirim ke WhatsApp
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-            )}
+                   {/* Modal Konfirmasi */}
+                   {showModal && (
+                       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                           <div className="bg-white rounded-lg max-w-2xl w-full max-h-[95vh] flex flex-col">
+                               <div className="p-4 sm:p-6 border-b border-gray-200 flex-shrink-0">
+                                   <h3 className="text-lg sm:text-xl font-bold text-gray-900">Konfirmasi Data Pendaftaran</h3>
+                                   <p className="text-gray-600 mt-1 text-sm sm:text-base">Periksa kembali data yang akan dikirim ke WhatsApp</p>
+                               </div>
+                               <div className="flex-1 overflow-y-auto p-4 sm:p-6 min-h-0">
+                                   <pre className="whitespace-pre-wrap text-xs sm:text-sm text-gray-700 font-mono bg-gray-50 p-3 sm:p-4 rounded-lg">
+                                       {modalData}
+                                   </pre>
+                               </div>
+                               <div className="p-4 sm:p-6 border-t border-gray-200 flex flex-col sm:flex-row gap-3 justify-end flex-shrink-0">
+                                   <Button
+                                       onClick={() => setShowModal(false)}
+                                       variant="outline"
+                                       className="px-4 sm:px-6 text-sm sm:text-base"
+                                   >
+                                       Batal
+                                   </Button>
+                                   <Button
+                                       onClick={handleDownloadPDF}
+                                       variant="outline"
+                                       className="px-4 sm:px-6 border-blue-500 text-blue-600 hover:bg-blue-50 text-sm sm:text-base"
+                                   >
+                                       📄 Unduh Form
+                                   </Button>
+                                   <Button
+                                       onClick={handleConfirmSubmit}
+                                       className="px-4 sm:px-6 bg-green-600 hover:bg-green-700 text-sm sm:text-base"
+                                   >
+                                       📱 Kirim ke WhatsApp
+                                   </Button>
+                               </div>
+                           </div>
+                       </div>
+                   )}
         </section>
     )
 }
