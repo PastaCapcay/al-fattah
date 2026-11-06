@@ -17,7 +17,12 @@ export const menuList = [
         label: "Layanan",
         dropDownMenu: []
     },
-    
+    {
+        id: 4,
+        path: "/ppdb",
+        label: "PPDB Online",
+        dropDownMenu: false
+    },
     {
         id: 5,
         path: "/portfolio",

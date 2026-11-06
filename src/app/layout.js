@@ -1,6 +1,7 @@
 
 import "./globals.css";
 import Script from "next/script";
+import FloatingWhatsApp from "@/components/ui/floatingWhatsApp";
 
 const siteUrl = process.env.SITE_URL || "https://tkalfattah.sch.id";
 
@@ -107,6 +108,7 @@ export default function RootLayout({ children }) {
           })}
         </Script>
         {children}
+        <FloatingWhatsApp />
       </body>
     </html>
   );

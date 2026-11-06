@@ -406,7 +406,7 @@ Mohon bantuannya untuk proses pendaftaran. Terima kasih.`
     }
 
     return (
-        <section id="pendaftaran" className="lg:pt-15 lg;pb-15 pb-10 pt-10">
+        <section id="pendaftaran" className="lg:pt-15 lg:pb-15 pb-10 pt-10">
             <div className="container">
                 <div className="max-w-[546px] mx-auto text-center">
                     <SectionName>Pendaftaran</SectionName>

@@ -20,14 +20,14 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                             <SlideUp>
                                 <div className="relative">
                                     <div>
-                                        <Image src={'/images/about/shap-1.png'} width={61} height={47} alt="shap" />
+                                        <Image src={'/images/about/shap-1.png'} width={61} height={47} alt="shap" style={{ width: 'auto', height: 'auto' }} />
                                     </div>
                                     <div className="ml-9">
-                                        <Image src={'/images/about/about-1.png'} width={320} height={417} alt="about-bg" className="w-full" />
+                                        <Image src={'/images/about/about-1.png'} width={320} height={417} alt="about-bg" className="w-full" style={{ height: 'auto' }} />
                                     </div>
                                     <div className="absolute -bottom-12.5 left-0 bg-primary rounded-[10px] py-4 px-[22px] flex items-center gap-3">
                                         <div className="bg-background w-11 h-11 rounded-full flex justify-center items-center">
-                                            <Image src={'/images/about/customer.png'} width={37} height={24} alt="customer" />
+                                            <Image src={'/images/about/customer.png'} width={37} height={24} alt="customer" style={{ width: 'auto', height: 'auto' }} />
                                         </div>
                                         <div>
                                             <h6 className="text-cream-foreground font-bold text-2xl">5,000+</h6>
@@ -37,8 +37,8 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                                 </div>
                             </SlideUp>
                             <div className="flex sm:flex-col gap-8">
-                                <div className="bg-warm max-w=[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col items-center justify-center text-center">
-                                    <Image src={'/images/about/icreement.png'} width={46} height={46} alt="icreement" />
+                                <div className="bg-warm max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col items-center justify-center text-center">
+                                    <Image src={'/images/about/icreement.png'} width={46} height={46} alt="icreement" style={{ width: 'auto', height: 'auto' }} />
                                     <h6 className="text-xl font-bold">Akademik</h6>
                                     <p>Al-Fattah</p>
                                 </div>
@@ -56,7 +56,7 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                         <SectionDescription>Al-Fattah berkomitmen menghadirkan lingkungan belajar yang aman, hangat, dan menyenangkan untuk menumbuhkan karakter, kemandirian, dan kreativitas.</SectionDescription>
                         <div className='lg:mt-10 mt-7'>
                             <Button asChild variant="outline">
-                                <Link href="/about-us">Minta Informasi</Link>
+                                <Link href="/contact-us#pendaftaran">Minta Informasi</Link>
                             </Button>
                         </div>
 

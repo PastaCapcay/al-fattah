@@ -10,6 +10,7 @@ export default async function sitemap() {
     "/portfolio",
     "/contact-us",
     "/faq",
+    "/ppdb",
   ];
 
   const now = new Date().toISOString();

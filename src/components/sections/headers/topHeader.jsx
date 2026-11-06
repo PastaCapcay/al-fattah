@@ -10,7 +10,7 @@ const TopHeader = () => {
                     <div>
                         <ul className="flex gap-5 flex-wrap justify-center text-[13px] lg:text-[14px]">
                             <li className='text-cream-foreground flex items-center gap-2'>
-                                <FaPhone /> <Link href={"/contact-us#pendaftaran"}>0812-9846-5771</Link>
+                                <FaPhone /> <Link href="tel:081298465771">0812-9846-5771</Link>
                             </li>
                             <li className='text-cream-foreground flex items-center gap-2'>
                                 <FaEnvelope /> <Link href={"mailto:info@tkalfattah.sch.id"}>info@tkalfattah.sch.id</Link>

@@ -17,9 +17,9 @@ const HeroOne = () => {
           </Title>
 
           <div className="flex absolute right-[87px] top-14 animate-skw">
-            <img src={'/images/shapes/shap.png'} width={39} height={63} alt="shap-2" className="w-7.5 h-12.5 relative top-9" />
-            <img src={'/images/shapes/shap.png'} width={39} height={63} alt="shap-1" />
-            <img src={'/images/shapes/shap.png'} width={39} height={63} alt="shap-2" className="w-5 h-8 -mt-7" />
+            <Image src={'/images/shapes/shap.png'} width={39} height={63} alt="shap-2" className="w-7.5 h-12.5 relative top-9" />
+            <Image src={'/images/shapes/shap.png'} width={39} height={63} alt="shap-1" />
+            <Image src={'/images/shapes/shap.png'} width={39} height={63} alt="shap-2" className="w-5 h-8 -mt-7" />
           </div>
 
           <p className="pt-5 max-w-[431px]">Lingkungan aman dan menyenangkan untuk belajar, bermain, dan bertumbuh setiap hari.</p>
@@ -35,24 +35,24 @@ const HeroOne = () => {
         </div>
 
         <div className="absolute right-0 bottom-0 pb-[71px] lg:block hidden animate-up-down">
-          <Image src={"/images/banner/boy_img_2.png"} width={285} height={369} alt="banner-img-2" />
+          <Image src={"/images/banner/boy_img_2.png"} width={285} height={369} alt="banner-img-2" style={{ width: 'auto', height: 'auto' }} />
           <span className="absolute -left-2.5 top-[9px] border-2 border-secondary rounded-[125px] max-h-[369px] w-full h-full"></span>
         </div>
 
-        <div className="lg:pt-[72px]">
-          <img src={'https://ascent-next-js.vercel.app/_next/image?url=%2Fimages%2Fbanner%2Fpainting.png&w=828&q=75'} width={768} height={314} alt="painting" />
+        <div className="lg:pt-[72px] flex justify-center">
+          <img src="/images/banner/painting.png" width={768} height={314} alt="painting" className="mx-auto max-w-full h-auto" />
         </div>
       </div>
       {/* <!-- circle shap --> */}
       <div className="lg:block hidden">
         <div className="absolute left-0 top-[60px] animate-left-right-2">
-          <Image src={'/images/banner/left-circle-1.png'} width={54} height={100} alt="img" />
+          <Image src={'/images/banner/left-circle-1.png'} width={54} height={100} alt="img" style={{ width: 'auto', height: 'auto' }} />
         </div>
         <div className="absolute left-[37px] top-[186px] animate-left-right-2">
-          <Image src={'/images/banner/left-circle-2.png'} width={54} height={54} alt="img" />
+          <Image src={'/images/banner/left-circle-2.png'} width={54} height={54} alt="img" style={{ width: 'auto', height: 'auto' }} />
         </div>
         <div className="absolute right-0 bottom-[165px] animate-up-down">
-          <Image src={'/images/banner/right-circle.png'} width={66} height={267} alt="img" />
+          <Image src={'/images/banner/right-circle.png'} width={66} height={267} alt="img" style={{ width: 'auto', height: 'auto' }} />
         </div>
       </div>
       {/* <!-- circle shap --> */}

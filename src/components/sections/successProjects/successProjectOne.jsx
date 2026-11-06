@@ -22,7 +22,7 @@ const SuccessProjectOne = () => {
                         <Title size={"3.5xl"} className={"lg:max-w-[410px] pb-5"}>Investasi pendidikan untuk masa depan anak</Title>
                         <SectionDescription> Kami berkomitmen menyediakan pembelajaran yang menyenangkan dan bermakna, didukung guru yang peduli dan fasilitas ramah anak.</SectionDescription>
                         <Button asChild variant="outline" className="mt-10">
-                            <Link href={"/contact-us#pendaftaran"}>Daftar Sekarang</Link>
+                            <Link href={"/ppdb"}>Daftar Sekarang</Link>
                         </Button>
                     </div>
 

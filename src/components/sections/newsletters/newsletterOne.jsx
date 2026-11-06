@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button'
 import { FaArrowRight } from "react-icons/fa6";
-import Input from '@/components/ui/input';
 import Title from '@/components/ui/title';
 import SectionName from '@/components/ui/sectionName';
 
@@ -22,7 +22,7 @@ const NewsletterOne = () => {
                             <Title size={"3.5xl"}>Pendidikan yang Menyalakan Imajinasi dan Rasa Ingin Tahu</Title>
                             <div className="relative lg:mt-10 mt-5">
                                 <Button asChild className="text-cream-foreground">
-                                    <a href="/contact-us#pendaftaran">Daftar Sekarang <FaArrowRight /></a>
+                                    <Link href="/ppdb">Daftar Sekarang <FaArrowRight /></Link>
                                 </Button>
                             </div>
                         </div>

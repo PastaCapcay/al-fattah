@@ -27,7 +27,7 @@ const HeaderOne = () => {
 
                                     <div className="flex items-center gap-8 ml-8">
                                         <Button asChild variant="ghost" className="sm:flex hidden">
-                                            <Link href={"/contact-us#pendaftaran"}> Daftar Sekarang <FaArrowRight /></Link>
+                                            <Link href={"/ppdb"}> Daftar Sekarang <FaArrowRight /></Link>
                                         </Button>
 
                                         <div className="flex xl:hidden flex-col items-end cursor-pointer transition-all duration-500" onClick={() => setIsMobleMenuActive(true)}>

@@ -124,7 +124,7 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         'left-right': 'left-right 2s linear infinite',
-        'left-right-2': 'left-right-2 4s linear infinite;',
+        'left-right-2': 'left-right-2 4s linear infinite',
         'up-down': 'up-down 2s linear infinite',
         'skw': 'skw 2s linear infinite',
         'expend-width-height': 'expend-width-height 2s linear infinite',

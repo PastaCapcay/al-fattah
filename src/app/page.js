@@ -3,6 +3,7 @@ import AboutOne from '@/components/sections/abouts/aboutOne'
 import HeaderOne from '@/components/sections/headers/headerOne'
 import HeroOne from '@/components/sections/heros/heroOne'
 import SuccessProjectOne from '@/components/sections/successProjects/successProjectOne'
+import PpdbFlow from '@/components/sections/ppdbFlow'
 import Gallery from '@/components/sections/gallery/gallery'
 import Programs from '@/components/sections/programs'
 import FaqComp from '@/components/sections/faqComp'
@@ -47,6 +48,7 @@ const Home = () => {
         <HeroOne />
         <SuccessProjectOne/>
         <AboutOne isAboutpage={false}/>
+        <PpdbFlow />
         <Programs/>
         <Gallery/>
         <FaqComp/>

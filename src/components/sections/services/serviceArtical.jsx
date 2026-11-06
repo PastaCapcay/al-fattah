@@ -13,9 +13,10 @@ import Link from 'next/link'
 const ServiceArtical = () => {
     const searchParams = useSearchParams()
     const key = searchParams.get('s')
-    const current = servicesDataTwo.find(s => s.slug === key)
+    const current = servicesDataTwo.find(s => s.slug === key) || servicesDataTwo[0]
+    const effectiveSlug = current?.slug || 'kb'
     const getServiceImage = (type) => {
-        switch (key) {
+        switch (effectiveSlug) {
             case 'kb':
                 return type === 'hero' ? '/images/services/service-details-1.png' : '/images/services/service-details-2.png'
             case 'tk':
@@ -48,7 +49,7 @@ const ServiceArtical = () => {
                             <Image src={getServiceImage('hero')} fill sizes='100vw' priority={true} alt="details" className="object-cover" />
                         </div>
                         <div className="absolute left-5 top-5 flex items-center gap-3 bg-white/90 backdrop-blur px-3 py-2 rounded">
-                            <Image src={key === 'kb' ? '/images/logos/KB.png' : key === 'tk' ? '/images/logos/TK.png' : key === 'daycare' ? '/images/logos/DAYCARE.png' : '/images/logos/YAYASAN.png'} width={28} height={28} alt="Logo Program" className="object-contain h-6 w-auto" />
+                            <Image src={effectiveSlug === 'kb' ? '/images/logos/KB.png' : effectiveSlug === 'tk' ? '/images/logos/TK.png' : effectiveSlug === 'daycare' ? '/images/logos/DAYCARE.png' : '/images/logos/YAYASAN.png'} width={28} height={28} alt="Logo Program" className="object-contain" style={{ width: 'auto', height: '24px' }} />
                             <span className="text-sm font-medium">{current?.service_name || 'Layanan'}</span>
                         </div>
                     </div>
@@ -79,7 +80,7 @@ const ServiceArtical = () => {
                             </ul>
                             <div>
                                 <div className="relative w-full" style={{ aspectRatio: '410 / 242' }}>
-                                    <Image src={getServiceImage('side')} fill alt="service-details" className="object-cover" />
+                                    <Image src={getServiceImage('side')} fill sizes="(max-width: 768px) 100vw, 50vw" alt="service-details" className="object-cover" />
                                 </div>
                             </div>
                         </div>

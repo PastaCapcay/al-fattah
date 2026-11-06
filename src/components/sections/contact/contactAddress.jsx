@@ -38,7 +38,7 @@ const ContactAddress = () => {
                                 <span className="text-cream-foreground text-[28px]"><FaPhone /> </span>
                             </div>
                             <h5 className="font-bold text-xl mt-5 pb-2.5">Kontak</h5>
-                            <p><a href="/contact-us#pendaftaran">0812-9846-5771</a></p>
+                            <p><a href="tel:081298465771">0812-9846-5771</a></p>
                         </div>
                     </SlideUp>
 

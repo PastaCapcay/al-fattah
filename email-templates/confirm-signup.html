@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konfirmasi Akun PPDB Al-Fattah</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #334155;
+      line-height: 1.6;
+    }
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+      background-color: #f8fafc;
+      padding: 40px 0;
+    }
+    .main-table {
+      max-width: 580px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+    .header {
+      background: linear-gradient(135deg, #F7941E 0%, #EA580C 100%);
+      padding: 40px 30px;
+      text-align: center;
+      color: #ffffff;
+    }
+    .header-badge {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .header p {
+      margin: 6px 0 0 0;
+      font-size: 13px;
+      opacity: 0.95;
+    }
+    .content {
+      padding: 35px 35px 25px 35px;
+    }
+    .greeting {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 14px;
+    }
+    .text {
+      font-size: 14px;
+      color: #475569;
+      margin-bottom: 24px;
+    }
+    .cta-container {
+      text-align: center;
+      margin: 32px 0;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #F7941E;
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 34px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(247, 148, 30, 0.35);
+    }
+    .notice-box {
+      background-color: #fff7ed;
+      border-left: 4px solid #F7941E;
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin-top: 25px;
+      font-size: 12.5px;
+      color: #9a3412;
+    }
+    .link-fallback {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px dashed #cbd5e1;
+      font-size: 12px;
+      color: #64748b;
+      word-break: break-all;
+    }
+    .link-fallback a {
+      color: #F7941E;
+    }
+    .footer {
+      background-color: #f1f5f9;
+      padding: 24px 30px;
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+      border-top: 1px solid #e2e8f0;
+    }
+    .footer strong {
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <table class="main-table" width="100%" cellpadding="0" cellspacing="0">
+      <!-- HEADER -->
+      <tr>
+        <td class="header">
+          <div class="header-badge">PPDB Online 2026/2027</div>
+          <h1>Konfirmasi Akun Wali Murid</h1>
+          <p>TK, KB, dan Daycare Al-Fattah</p>
+        </td>
+      </tr>
+
+      <!-- BODY CONTENT -->
+      <tr>
+        <td class="content">
+          <div class="greeting">Assalamu'alaikum Warahmatullahi Wabarakatuh,</div>
+          <p class="text">
+            Terima kasih telah mendaftarkan akun di portal <strong>PPDB Online Al-Fattah</strong>. 
+            Tinggal satu langkah lagi untuk mengaktifkan akun Anda agar dapat melanjutkan pengisian data formulir dan mengunggah berkas calon peserta didik baru.
+          </p>
+
+          <p class="text">
+            Silakan klik tombol konfirmasi di bawah ini untuk memverifikasi alamat email Anda:
+          </p>
+
+          <!-- CTA BUTTON -->
+          <div class="cta-container">
+            <a href="{{ .ConfirmationURL }}" class="btn" target="_blank">
+              ✓ Konfirmasi Email Saya
+            </a>
+          </div>
+
+          <div class="notice-box">
+            🔒 <strong>Keamanan:</strong> Tautan ini aman dan hanya berlaku selama 24 jam. Jika Anda tidak pernah merasa mendaftar di PPDB Al-Fattah, silakan abaikan email ini.
+          </div>
+
+          <!-- FALLBACK LINK -->
+          <div class="link-fallback">
+            Jika tombol di atas tidak dapat diklik, salin dan tempel tautan berikut ke browser Anda:<br>
+            <a href="{{ .ConfirmationURL }}">{{ .ConfirmationURL }}</a>
+          </div>
+        </td>
+      </tr>
+
+      <!-- FOOTER -->
+      <tr>
+        <td class="footer">
+          <strong>TK, KB, dan Daycare Al-Fattah</strong><br>
+          Yayasan Wira Mahardhika Wicaksana<br>
+          Layanan Informasi & WhatsApp: <a href="https://wa.me/6281298465771" style="color: #F7941E; text-decoration: none; font-weight: bold;">0812-9846-5771</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
+

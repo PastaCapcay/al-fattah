@@ -52,7 +52,7 @@ const FooterTwo = () => {
                                 <FaEnvelope className='mt-1.5' /> <Link href="mailto:info@tkalfattah.sch.id">info@tkalfattah.sch.id</Link>
                             </li>
                             <li className="text-cream-foreground flex gap-4">
-                                <FaPhone className='mt-1.5' /> <Link href="/contact-us#pendaftaran">0812-9846-5771</Link>
+                                <FaPhone className='mt-1.5' /> <Link href="tel:081298465771">0812-9846-5771</Link>
                             </li>
                         </ul>
                     </SlideUp>
